@@ -100,7 +100,7 @@ declare class ReadableStreamBYOBRequest {
     respondWithNewView(view: ArrayBufferView): void;
 }
 
-interface WritableStreamSink<W = ArrayBufferView> {
+export interface WritableStreamSink<W = ArrayBufferView> {
     start?(controller: WritableStreamDefaultController<W>): void | Promise<any>;
     write?(chunk: W, controller?: WritableStreamDefaultController<W>): void | Promise<any>;
     close?(controller: WritableStreamDefaultController<W>): void | Promise<any>;
